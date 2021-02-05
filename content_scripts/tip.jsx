@@ -119,7 +119,7 @@ function makeTipEl(root, options, isBottom) {
         width: 36px;
         height: 24px;
         line-height: 24px;
-        background: #f5f5d5;
+        background: #f6f6f6;
         text-align: center;
         cursor: pointer;
         border-radius: 2px;
@@ -139,7 +139,7 @@ function makeTipEl(root, options, isBottom) {
         top: ${!isBottom && '-4px'};
         width: 20px;
         height: 20px;
-        background: #f5f5d5;
+        background: #f6f6f6;
         border: 1px solid #444;"
         ></div>
       </div>`;
@@ -149,7 +149,7 @@ function makeTipEl(root, options, isBottom) {
       return html`<div
         style="
         position: relative;
-        background: #f5f5d5;
+        background: #f6f6f6;
         border-radius: 4px;
         font-size: 14px;
         color: #222;
@@ -168,7 +168,7 @@ function makeTipEl(root, options, isBottom) {
           top: ${!isBottom && '-4px'};
           width: 20px;
           height: 20px;
-          background: #f5f5d5;
+          background: #f6f6f6;
           border: 1px solid #444;"
         ></div>
       </div>`;
@@ -252,51 +252,6 @@ function makeTipEl(root, options, isBottom) {
         </div>
       </div>
 
-      ${options.isExist
-        ? html`<div class="bluesea-tip-row">
-            <div style="flex:1"></div>
-            <div class="bluesea-tip-btn-wrap">
-              <div
-                class="bluesea-tip-btn"
-                style="color: #888; cursor: not-allowed; "
-              >
-                编辑
-              </div>
-            </div>
-          </div>`
-        : html`<div class="bluesea-tip-row">
-            <div style="flex:1"></div>
-            <div class="bluesea-tip-btn-wrap">
-              <div
-                class="bluesea-tip-btn"
-                style="color: #888; cursor: not-allowed; "
-              >
-                编辑
-              </div>
-              <div
-                style="
-                  width: 1px;
-                  height: 16px;
-                  background: #666;
-                  "
-              ></div>
-              <div
-                style=${{
-                  color: !isOneWord && '#888',
-                  cursor: !isOneWord && 'not-allowed',
-                }}
-                class="bluesea-tip-btn"
-                onclick=${() => {
-                  if (isOneWord) {
-                    options.onMark(tfData);
-                  }
-                }}
-              >
-                收藏
-              </div>
-            </div>
-          </div>`}
-
       <div
         style="position: absolute;
           z-index: -1;
@@ -306,13 +261,13 @@ function makeTipEl(root, options, isBottom) {
           top: ${!isBottom && '-4px'};
           width: 20px;
           height: 20px;
-          background: #f5f5d5;
+          background: #f6f6f6;
           border: 1px solid #444;"
       ></div>
       <style>
         .bluesea-tip {
           position: relative;
-          background: #f5f5d5;
+          background: #f6f6f6;
           border-radius: 4px;
           font-size: 14px;
           color: #222;

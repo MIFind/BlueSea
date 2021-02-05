@@ -11,11 +11,11 @@ chrome.runtime.onMessage.addListener(
         if (material && material.youdao) {
           sendResponse(material.youdao);
         } else {
-          const config = await bluesea.getConfig()
           const res = await fetch(
-            `https://service-pnrys8g3-1254074572.bj.apigw.tencentcs.com/release?text=${payload}&appkey=${config['有道智云appkey'] || ''}&key=${config['有道智云key'] || ''}`
+            `https://service-pnrys8g3-1254074572.bj.apigw.tencentcs.com/release?text=${payload}&appkey=663c48246fefa63c&key=WojrRGSsP8O2Vd253EZqxNCpisQ6mkVZ`
           ).then((raw) => raw.json());
           if (res.success) {
+			  console.log(res)
             sendResponse(res.content);
           } else {
             sendResponse();
